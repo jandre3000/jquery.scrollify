@@ -1,0 +1,184 @@
+
+  .jq-scroller-wrapper * {
+    box-sizing: border-box;
+  }
+
+  .jq-scroller,
+  .jq-scroller-wrapper {
+    max-width: 800px;
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+    white-space: nowrap;
+    list-style: none;
+    position: relative;
+    height: 180px;
+  }
+
+  .jq-scroller {
+    border: 1px solid lightgrey;
+    padding-top: 12px;
+    border-radius: 6px;
+    box-shadow: inset 0px 3px 14px -4px rgba(0, 0, 0, 0.2);
+  }
+
+  .jq-scroller-wrapper {
+    overflow: visible;
+  }
+
+  .jq-scroller-prev,
+  .jq-scroller-next {
+    position: absolute;
+    top: 50%;
+    height: 28px;
+    margin-top: -10px;
+    width: 28px;
+    left: -36px;
+    z-index: 1;
+    font-size: 32px;
+    opacity: 0.3;
+    cursor: pointer;
+  }
+
+  .jq-scroller-next {
+    left: auto;
+    right: -36px;
+  }
+
+  .jq-scroller-prev:hover,
+  .jq-scroller-next:hover {
+    opacity: 1;
+  }
+
+  .jq-scroller-mover {
+    position: relative;
+    word-spacing: -4px;
+    height: 100%;
+    list-style: none;
+    padding: 0; 
+    margin: 0; 
+    text-align: center; 
+  }
+
+  .jq-scroller-item {
+    display: inline-block;
+    width: 23%;
+    min-width: 140px;
+    height: 100%;
+    white-space: nowrap;
+    border-radius: 6px;
+    vertical-align: bottom;
+    position: relative;
+    padding-left: 1%;
+    padding-right: 1%;
+    cursor: pointer;
+  }
+
+  .jq-scroller-preview {
+    width: 100%;
+    height: 80%;
+    background-image: url(http://allaboutuarts.ca/wp-content/uploads/2012/07/placeholder_2.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    border: 1px solid darkgrey;
+    transition: opacity 0.1s ease-in;
+    opacity: 0.5;
+    display: block;
+  }
+  .jq-scroller-preview img{
+    display: none;
+  }
+
+  .jq-scroller-preview:hover {
+    opacity: 1;
+  }
+
+  .jq-scroller-caption {
+    position: relative;
+    bottom: 0;
+    text-align: center;
+    display: block;
+    width: 100%;
+    height: 20%;
+    word-spacing: 0;
+    font-weight: bold;
+    font-size: 11px;
+    white-space: normal;
+    line-height: 1.5em;
+  }
+
+  .jq-scroller-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.1s ease-in;
+  }
+
+  .jq-scroller-overlay.active {
+    z-index: 2;
+    opacity: 1;
+  }
+
+  .jq-overlay-item {
+    position: fixed;
+    max-width: 50%;
+    left: 25%;
+    max-height: 90%;
+    top: 5%;
+    background-color: white;
+    z-index: 3;
+    padding: 20px;
+  }
+
+  .jq-overlay-item iframe {
+    width: 800px !important;
+    height: 600px !important;
+    position: relative;
+  }
+
+  .jq-overlay-item img {
+    max-width: 100%;
+    max-height: 100%;
+    position: relative;
+  }
+
+  .jq-overlay-close {
+    position: absolute;
+    right: -6px;
+    top: -6px;
+    cursor: pointer;
+    font-size: 24px;
+  }
+
+  .jq-scroller-overlay-next,
+  .jq-scroller-overlay-prev {
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 20px  0 0 20px;
+    text-align: center;
+    margin-top: -40px;
+    font-size: 32px;
+    color: lightgrey;
+    cursor: pointer;
+  }
+
+  .jq-scroller-overlay-next {
+    left: auto;
+    right: -20px;
+    border-radius: 0 20px 20px 0;
+  }
+
+  .jq-scroller-overlay-next:hover,
+  .jq-scroller-overlay-prev:hover {
+    color: black;
+  }
