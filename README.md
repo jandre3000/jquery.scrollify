@@ -4,7 +4,7 @@
 This simple jQuery plugin takes a simple list and turns it into a slider with lightbox functionality, like this: 
 
 ![](preview.png)
- 
+[demo](http://j4n-co.github.io/jquery.scrollify/) 
 
 ## Installation
 
