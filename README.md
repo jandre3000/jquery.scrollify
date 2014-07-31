@@ -39,11 +39,18 @@ The element to scrollify should be a `<ul>`.
 
 Each `<li>` inside the `<ul>` should contain an `<a>` element. The `<a>` should have an `href` set to the large image, and a `data-title` attribute containing the caption. Inside the `<a>`, there should be a smaller preview image. 
 
+To show an `iFrame` in the lightbox, for example a youtube video, add the attribute `data-type="iframe"` to the `<a>` element. 
+
 ```
 <ul class="scroller"> 
     <li>
         <a href="http://placekitten.com/800/800" data-title="caption"> 
 	        <img src="http://placekitten.com/300/300"> 
+        </a>
+    </li>
+    <li> 
+        <a href="http://www.youtube.com/embed/i_mKY2CQ9Kk" data-title="I'm a video." data-type="iframe"> 
+            <img src="http://placekitten.com/912/912"> 
         </a>
     </li>
 </ul> 

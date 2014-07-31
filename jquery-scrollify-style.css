@@ -137,8 +137,9 @@
   }
 
   .jq-overlay-item iframe {
-    width: 800px !important;
-    height: 600px !important;
+    width: 100% !important;
+    height: 80% !important;
+    min-width: 800px; 
     position: relative;
   }
 

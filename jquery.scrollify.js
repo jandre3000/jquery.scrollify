@@ -25,7 +25,7 @@
 				var a = li.find('a').first(); 
 				a.addClass('jq-scroller-preview')
 				li.addClass('jq-scroller-item');
-				a.attr('style', 'background-image:url('+a.attr('href')+');')
+				a.attr('style', 'background-image:url('+a.children('img').attr('src')+');')
 				li.append('<div class="jq-scroller-caption">'+a.attr('data-title')+'</div>')
 			})
 		}
@@ -96,7 +96,12 @@
 				var contentLink =  $(this).children('.jq-scroller-preview')
 				var contentImageSrc = contentLink.attr('href')
 				var caption = contentLink.attr('data-title')
-				var content = $('<img src="'+contentImageSrc+'"/><p>'+caption+'</p>');
+
+				if (contentLink.attr('data-type') == 'iframe'){
+					var content = $('<iframe src="'+contentImageSrc+'"  frameborder="0" allowfullscreen></iframe><p>'+caption+'</p>');
+				} else {
+					var content = $('<img src="'+contentImageSrc+'"/><p>'+caption+'</p>');
+				}
 				content.appendTo(overlayContent);
 				overlay.addClass('active')
 			})
