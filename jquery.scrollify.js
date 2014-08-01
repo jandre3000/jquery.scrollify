@@ -96,11 +96,12 @@
 				var contentLink =  $(this).children('.jq-scroller-preview')
 				var contentImageSrc = contentLink.attr('href')
 				var caption = contentLink.attr('data-title')
+				var maxHeight = ($(document).height() - 200)+"px"; 
 
 				if (contentLink.attr('data-type') == 'iframe'){
 					var content = $('<iframe src="'+contentImageSrc+'"  frameborder="0" allowfullscreen></iframe><p>'+caption+'</p>');
 				} else {
-					var content = $('<img src="'+contentImageSrc+'"/><p>'+caption+'</p>');
+					var content = $('<img src="'+contentImageSrc+'" style="max-height:'+maxHeight+';"/><p>'+caption+'</p>');
 				}
 				content.appendTo(overlayContent);
 				overlay.addClass('active')
